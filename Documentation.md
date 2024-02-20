@@ -13,15 +13,13 @@ However, it becomes difficult for businesses to maintain their staff and keep ev
     **Criteria:** A well-made mobile solution should improve communication, task management and secure access for businesses. Fosterign employee productivity and satisfaction. When is it done: when consistent positive impacts are validated trough feedback.
 
     **Research Methods:**
-    Field: Survey, Interviews, Stakeholder analysis
-
-    Lab: Data analytics
+    Survey, Interviews, Stakeholder analysis and Data analytics
 
 2.  How can businesses measure the improvements made when implementing our mobile app for remote work, and which key performance indicators (KPI) are most relevant?
 
     **Criteria:** Businesses measure succes by seeing if the remote work app boosts productivity, is widely used, improves communication, speeds up tasks, reduces errors, makes employees happier, ensures secure data access, enhances collaboration, save costs and supports work-life balance.
 
-    **Research Methods:** Field: Surveys, Focus groups, Interviews
+    **Research Methods:** Surveys, Focus groups, Interviews
 
 3.  How can a mobile solution contribute to promoting the work-life of remote workers?
 
@@ -39,7 +37,7 @@ However, it becomes difficult for businesses to maintain their staff and keep ev
 
     **Criteria:** The app should work seamlessly with already existing tools and software in the organization.
 
-    **Research Methods:**
+    **Research Methods:** 
 
 6.  How can a mobile solution help remote workers to communicate and collaborate in a better way?
 
