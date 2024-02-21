@@ -25,22 +25,22 @@ However, it becomes difficult for businesses to maintain their staff and keep ev
 
     **Criteria:** A mobile solution can promote the work-life by offering schedules, easy access to work-related information, and improving communication, allowing the employees to manage their tasks and personal life more efficient.
 
-    **Research Methods:** Field: Observations, Interviews, Document Analysis
+    **Research Methods:** Observations, Interviews, Document Analysis
 
 4.  Which security and privacy problems must we consider when making the mobile app for remote work, and how can our stakeholder's business manage this?
 
     **Criteria:** The mobile app should use the last security protocols for data transmission and storage to ensure privacy.
 
-    **Research Methods:**
+    **Research Methods:** Stakeholder Analysis, Surveys and Interviews
 
 5.  How do mobile apps for remote working improve the workflow, and how does it impact overall productivity and experience?
 
     **Criteria:** The app should work seamlessly with already existing tools and software in the organization.
 
-    **Research Methods:** 
+    **Research Methods:** Usability Testing, Analytics Analysis, Surveys
 
 6.  How can a mobile solution help remote workers to communicate and collaborate in a better way?
 
     **Criteria:** The remote workers must be able to communicate effortless with the office.
 
-    **Research Methods:**
+    **Research Methods:** Focus Groups, Usability Testing, Interviews
