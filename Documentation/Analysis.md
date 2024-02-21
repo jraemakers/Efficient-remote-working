@@ -91,3 +91,9 @@ Survey, Interviews, Stakeholder analysis and Data analytics
 ## Ideas
 
 We asked ChatGPT to provide us with 50 ideas on how to address issues related to remote work after Marcel suggested using ChatGPT. We arrived at the following idea:
+
+**Coffee Table Idea:**
+
+Target Group: Remote workers who want to replicate the coffee table and chatting experience with their colleagues.
+Problem: When working remotely, some problems that you may come across are based on communication. Some people miss having their colleagues around.
+Desgin: A bird-eye view of a table. People can clock in and join the table, send texts and communicate.
