@@ -67,13 +67,13 @@ Survey, Interviews, Stakeholder analysis and Data analytics
 
     **Research Methods:** Surveys, Focus groups, Interviews
 
-2.  How can a mobile solution contribute to promoting the work-life of remote workers?
+2.  How can a mobile solution contribute to promoting the work-life of remote workers, who miss informal conversations with their colleagues?
 
     **Criteria:** A mobile solution can promote the work-life by offering schedules, easy access to work-related information, and improving communication, allowing the employees to manage their tasks and personal life more efficient.
 
     **Research Methods:** Observations, Interviews, Document Analysis
 
-3.  Which security and privacy problems must we consider when making the mobile app for remote work, and how can our stakeholder's business manage this?
+3.  Which security and privacy problems must we consider when making the mobile app for remote work, who want informal conversations with their colleagues, and how can our stakeholder's business manage this?
 
     **Criteria:** The mobile app should use the last security protocols for data transmission and storage to ensure privacy.
 
