@@ -99,3 +99,7 @@ Target Group: Remote workers who want to replicate the coffee table and chatting
 Problem: When working remotely, you can't drink coffee with you colleagues and chat about the weather.
 
 Idea: A app with a bird-eye view of a coffee table. People can join the table and communicate with eachother. You can schedule a coffee breaks, sending notifications to participants when it's time for a break.
+
+## Survey
+
+https://forms.gle/Qp5JzPpXH2SMfDdx7
