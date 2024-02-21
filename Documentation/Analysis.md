@@ -1,12 +1,6 @@
-# Efficient Remote Working
+# Analysis
 
-## Goal:
-
-One of the other problems that can be solved by mobile apps is remote working. Since working from home is now a reality for many people and remote working provides a sense of freedom and flexibility.
-When you work from home, you can respond quickly to time-sensitive issues and do not need to follow the daily office schedule.
-However, it becomes difficult for businesses to maintain their staff and keep everyone updated with the latest information.
-
-## Research Questions:
+## Research Questions
 
 1.  How can a mobile solution help both the business as the employee to work at home more efficiently?
 
@@ -37,7 +31,7 @@ However, it becomes difficult for businesses to maintain their staff and keep ev
 
     **Criteria:** The app should work seamlessly with already existing tools and software in the organization.
 
-    **Research Methods:** 
+    **Research Methods:**
 
 6.  How can a mobile solution help remote workers to communicate and collaborate in a better way?
 
