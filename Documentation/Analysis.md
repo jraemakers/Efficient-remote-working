@@ -91,7 +91,7 @@ Survey, Interviews, Stakeholder analysis and Data analytics
 
     **Research Methods:** Focus Groups, Usability Testing, Interviews
 
-## ## Research Method 2: Brainstorming
+ ## Research Method 2: Brainstorming
 
 We asked ChatGPT to provide us with 50 ideas on how to address issues related to remote work after Marcel suggested using ChatGPT. We arrived at the following idea:
 
@@ -103,6 +103,6 @@ Problem: When working remotely, you can't drink coffee with you colleagues and c
 
 Idea: A app with a bird-eye view of a coffee table. People can join the table and communicate with eachother. You can schedule a coffee breaks, sending notifications to participants when it's time for a break.
 
-## ## Research Method 3: Survey
+## Research Method 3: Survey
 
 https://forms.gle/Qp5JzPpXH2SMfDdx7
