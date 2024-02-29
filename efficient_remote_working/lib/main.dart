@@ -37,18 +37,13 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Your App Title'),
-        backgroundColor: Colors.blue,
-      ),
       body: IndexedStack(
         index: _currentIndex,
         children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color(0xFF1E1D2A),
         onTap: (index) {
           setState(() {
             _currentIndex = index;
@@ -56,24 +51,41 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(
+              Icons.home_outlined,
+              color: Colors.white,
+            ),
             label: 'Home',
-            activeIcon: Icon(Icons.home),
+            activeIcon: Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-            icon: Icon(Icons.emoji_emotions_outlined),
-            label: 'Moods',
-            activeIcon: Icon(Icons.emoji_emotions),
-          ),
+              icon: Icon(
+                Icons.emoji_emotions_outlined,
+                color: Colors.white,
+              ),
+              label: 'Moods',
+              activeIcon: Icon(
+                Icons.emoji_emotions,
+                color: Colors.white,
+              ),
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
-            backgroundColor: Colors.red,
-            icon: Icon(Icons.table_bar_outlined),
+            icon: Icon(
+              Icons.table_bar_outlined,
+              color: Colors.white,
+            ),
             label: 'Table',
-            activeIcon: Icon(Icons.table_bar),
+            activeIcon: Icon(
+              Icons.table_bar,
+              color: Colors.white,
+            ),
           ),
         ],
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
       ),
     );
   }
