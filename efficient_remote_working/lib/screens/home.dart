@@ -66,22 +66,36 @@ class HomeScreen extends StatelessWidget {
             top: 190, // Adjust the top position for the second container
             left: 16, // Adjust the left position as needed
             right: 16, // Adjust the right position as needed
-            child: Container(
-              height: 300, // Set the height as needed
-              decoration: BoxDecoration(
-                color: const Color(0xFF252736),
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _buildEmojiWithProgressBar('😃', 0.8),
-                  _buildEmojiWithProgressBar('😊', 0.6),
-                  _buildEmojiWithProgressBar('😐', 0.3),
-                  _buildEmojiWithProgressBar('😕', 0.4),
-                  _buildEmojiWithProgressBar('😞', 0.5),
-                ],
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'SUMMARY',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+                SizedBox(height: 8),
+                Container(
+                  height: 300, // Set the height as needed
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF252736),
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildEmojiWithProgressBar('😴', 0.8),
+                      _buildEmojiWithProgressBar('😢', 0.6),
+                      _buildEmojiWithProgressBar('😐', 0.3),
+                      _buildEmojiWithProgressBar('😃', 0.4),
+                      _buildEmojiWithProgressBar('😡', 0.5),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -115,7 +129,7 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.blue,
-                border: Border.all(color: Colors.white, width: 0.8),
+                border: Border.all(color: Colors.white, width: 1),
                 borderRadius: BorderRadius.circular(50),
               ),
             ),
