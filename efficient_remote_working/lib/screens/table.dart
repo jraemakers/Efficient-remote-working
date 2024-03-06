@@ -7,22 +7,20 @@ class TableScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // ignore: prefer_const_constructors
         title: Column(
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
             const Text(
-              'THE COFFEE TABLE',
+              'WELCOME BACK, USER!',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 1), // Adjust the spacing as needed
+            const SizedBox(height: 1),
             const Text(
-              'COMMUNICATION IS KEY',
+              'LET\'S TRACK YOUR MOOD',
               style: TextStyle(
-                color: Colors.blue, // Set the text color to blue
+                color: Colors.blue,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -31,16 +29,28 @@ class TableScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color(0xFF1E1D2A),
       ),
-      body: Container(
-        color: const Color(0xFF1E1D2A),
-        child: const Center(
-          child: Text(
-            'Home Screen',
-            style: TextStyle(
-              color: Colors.white,
+      body: Stack(
+        children: [
+          Container(
+            color: const Color(0xFF1E1D2A),
+            child: const Center(
             ),
           ),
-        ),
+          Positioned(
+            top: 70, // Adjust the top position as needed
+            left: 66, // Adjust the left position as needed
+            right: 66, // Adjust the right position as needed
+            child: Container(
+              height: 450, // Set the height as needed
+              decoration: BoxDecoration(
+                color: const Color(0xFF252736),
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: Center(
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
