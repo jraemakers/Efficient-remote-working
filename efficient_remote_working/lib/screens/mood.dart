@@ -7,17 +7,17 @@ class MoodScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Column(
+        title: const Column(
           children: [
-            const Text(
+            Text(
               'COLLEAGUES MOODS',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 1),
-            const Text(
+            SizedBox(height: 1),
+            Text(
               'HOW IS THE REST FEELING',
               style: TextStyle(
                 color: Colors.blue,
@@ -29,165 +29,198 @@ class MoodScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color(0xFF1E1D2A),
       ),
-      body: Stack(
-        children: [
-          Container(
-            color: const Color(0xFF1E1D2A),
-          ),
-          Positioned(
-            top: 30, // Adjust the top position as needed
-            left: 100, // Adjust the left position as needed
-            right: 16, // Adjust the right position as needed
-            child: Container(
-              height: 110, // Set the height as needed
-              decoration: BoxDecoration(
-                color: const Color(0xFF252736),
-                borderRadius: BorderRadius.circular(12.0),
+      body: Container(
+        color: const Color(0xFF1E1D2A),
+        child: Stack(
+          children: [
+            const Positioned(
+              top: 50,
+              left: 16,
+              width: 75,
+              height: 75,
+              child: CircleAvatar(
+                backgroundImage: AssetImage(
+                  'assets/images/andrea.jpg',
+                ),
+                radius: 24,
               ),
-              // ignore: prefer_const_constructors
-              child: Center(
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '😴', // Replace with your desired emoji
-                          style: TextStyle(
-                            fontSize: 24, // Adjust the font size as needed
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+            ),
+            const Positioned(
+              top: 175,
+              left: 16,
+              width: 75,
+              height: 75,
+              child: CircleAvatar(
+                backgroundImage: AssetImage(
+                  'assets/images/justin.jpg',
+                ),
+                radius: 24,
+              ),
+            ),
+            const Positioned(
+              top: 300,
+              left: 16,
+              width: 75,
+              height: 75,
+              child: CircleAvatar(
+                backgroundImage: AssetImage(
+                  'assets/images/stefan.jpg',
+                ),
+                radius: 24,
+              ),
+            ),
+            Positioned(
+              top: 30,
+              left: 100,
+              right: 16,
+              child: Container(
+                height: 110,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF252736),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: const Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '😴',
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 8), // Adjust the spacing as needed
-                        Text(
-                          'SARAH V.',
-                          style: TextStyle(
-                            fontSize: 20, // Adjust the font size as needed
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(width: 8),
+                          Text(
+                            'SARAH V.',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8), // Adjust the spacing as needed
-                    Text(
-                      'SARAH IS FEELING: LAZY',
-                      style: TextStyle(
-                        color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        fontSize: 16, // Adjust the font size as needed
+                        ],
                       ),
-                    ),
-                  ],
+                      SizedBox(height: 8),
+                      Text(
+                        'SARAH IS FEELING: LAZY',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Positioned(
-            top: 160, // Adjust the top position as needed
-            left: 100, // Adjust the left position as needed
-            right: 16, // Adjust the right position as needed
-            child: Container(
-              height: 110, // Set the height as needed
-              decoration: BoxDecoration(
-                color: const Color(0xFF252736),
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-              // ignore: prefer_const_constructors
-              child: Center(
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '😃', // Replace with your desired emoji
-                          style: TextStyle(
-                            fontSize: 24, // Adjust the font size as needed
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+            Positioned(
+              top: 160,
+              left: 100,
+              right: 16,
+              child: Container(
+                height: 110,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF252736),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: const Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '😃',
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 8), // Adjust the spacing as needed
-                        Text(
-                          'MIKE S.',
-                          style: TextStyle(
-                            fontSize: 20, // Adjust the font size as needed
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(width: 8),
+                          Text(
+                            'MIKE S.',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8), // Adjust the spacing as needed
-                    Text(
-                      'MIKE IS FEELING: GOOD',
-                      style: TextStyle(
-                        color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        fontSize: 16, // Adjust the font size as needed
+                        ],
                       ),
-                    ),
-                  ],
+                      SizedBox(height: 8),
+                      Text(
+                        'MIKE IS FEELING: HAPPY',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Positioned(
-            top: 290, // Adjust the top position as needed
-            left: 100, // Adjust the left position as needed
-            right: 16, // Adjust the right position as needed
-            child: Container(
-              height: 110, // Set the height as needed
-              decoration: BoxDecoration(
-                color: const Color(0xFF252736),
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-              // ignore: prefer_const_constructors
-              child: Center(
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '😡', // Replace with your desired emoji
-                          style: TextStyle(
-                            fontSize: 24, // Adjust the font size as needed
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+            Positioned(
+              top: 290,
+              left: 100,
+              right: 16,
+              child: Container(
+                height: 110,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF252736),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: const Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '😡',
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 8), // Adjust the spacing as needed
-                        Text(
-                          'TOM K.',
-                          style: TextStyle(
-                            fontSize: 20, // Adjust the font size as needed
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(width: 8),
+                          Text(
+                            'TOM K.',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8), // Adjust the spacing as needed
-                    Text(
-                      'TOM IS FEELING: ANGRY',
-                      style: TextStyle(
-                        color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        fontSize: 16, // Adjust the font size as needed
+                        ],
                       ),
-                    ),
-                  ],
+                      SizedBox(height: 8),
+                      Text(
+                        'TOM IS FEELING: ANGRY',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
