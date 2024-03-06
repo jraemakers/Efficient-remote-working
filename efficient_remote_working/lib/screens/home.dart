@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  '*MOOD CHANGER HERE*',
+                  'MOOD CHANGER 1',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -62,8 +62,67 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            top: 190, // Adjust the top position for the second container
+            left: 16, // Adjust the left position as needed
+            right: 16, // Adjust the right position as needed
+            child: Container(
+              height: 300, // Set the height as needed
+              decoration: BoxDecoration(
+                color: const Color(0xFF252736),
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildEmojiWithProgressBar('😃', 0.8),
+                  _buildEmojiWithProgressBar('😊', 0.6),
+                  _buildEmojiWithProgressBar('😐', 0.3),
+                  _buildEmojiWithProgressBar('😕', 0.4),
+                  _buildEmojiWithProgressBar('😞', 0.5),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
+
+  Widget _buildEmojiWithProgressBar(String emoji, double progress) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          emoji,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+          ),
+        ),
+        SizedBox(width: 10),
+        Container(
+          width: 200,
+          height: 20,
+          decoration: BoxDecoration(
+            color: Colors.grey,
+            border: Border.all(color: Colors.white, width: 2),
+            borderRadius: BorderRadius.circular(50),
+          ),
+          child: FractionallySizedBox(
+            widthFactor: progress,
+            alignment: Alignment.centerLeft,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(color: Colors.white, width: 0.8),
+                borderRadius: BorderRadius.circular(50),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }
+
