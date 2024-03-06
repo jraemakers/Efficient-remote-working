@@ -10,7 +10,7 @@ class TableScreen extends StatelessWidget {
         title: Column(
           children: [
             const Text(
-              'WELCOME BACK, USER!',
+              'THE COFFEE TABLE',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -18,7 +18,7 @@ class TableScreen extends StatelessWidget {
             ),
             const SizedBox(height: 1),
             const Text(
-              'LET\'S TRACK YOUR MOOD',
+              'COMMUNICATION IS KEY',
               style: TextStyle(
                 color: Colors.blue,
                 fontWeight: FontWeight.bold,
