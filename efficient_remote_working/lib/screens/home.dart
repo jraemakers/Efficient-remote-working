@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,17 +8,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Column(
+        title: const Column(
           children: [
-            const Text(
+            Text(
               'WELCOME BACK, USER!',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 1),
-            const Text(
+            SizedBox(height: 1),
+            Text(
               'LET\'S TRACK YOUR MOOD',
               style: TextStyle(
                 color: Colors.blue,
@@ -33,55 +34,48 @@ class HomeScreen extends StatelessWidget {
         children: [
           Container(
             color: const Color(0xFF1E1D2A),
-            child: const Center(
-              child: Text(
-                'Home Screen',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
+          ),
+          const Positioned(
+            top: 30,
+            left: 16,
+            right: 16,
+            height: 250,
+            child: MoodSwitcher(),
           ),
           Positioned(
-            top: 30, // Adjust the top position as needed
-            left: 16, // Adjust the left position as needed
-            right: 16, // Adjust the right position as needed
-            child: Container(
-              height: 150, // Set the height as needed
-              decoration: BoxDecoration(
-                color: const Color(0xFF252736),
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-              child: Center(
-                child: Text(
-                  'MOOD CHANGER 1',
+            top: 300,
+            left: 16,
+            right: 16,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  'SUMMARY',
                   style: TextStyle(
                     color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
                   ),
                 ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 190, // Adjust the top position for the second container
-            left: 16, // Adjust the left position as needed
-            right: 16, // Adjust the right position as needed
-            child: Container(
-              height: 300, // Set the height as needed
-              decoration: BoxDecoration(
-                color: const Color(0xFF252736),
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _buildEmojiWithProgressBar('😃', 0.8),
-                  _buildEmojiWithProgressBar('😊', 0.6),
-                  _buildEmojiWithProgressBar('😐', 0.3),
-                  _buildEmojiWithProgressBar('😕', 0.4),
-                  _buildEmojiWithProgressBar('😞', 0.5),
-                ],
-              ),
+                const SizedBox(height: 8),
+                Container(
+                  height: 300,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF252736),
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildEmojiWithProgressBar('😴', 0.8),
+                      _buildEmojiWithProgressBar('😢', 0.6),
+                      _buildEmojiWithProgressBar('😐', 0.3),
+                      _buildEmojiWithProgressBar('😃', 0.4),
+                      _buildEmojiWithProgressBar('😡', 0.5),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -95,12 +89,12 @@ class HomeScreen extends StatelessWidget {
       children: [
         Text(
           emoji,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 24,
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Container(
           width: 200,
           height: 20,
@@ -126,3 +120,123 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+class MoodSwitcher extends StatefulWidget {
+  const MoodSwitcher({super.key});
+
+  @override
+  _MoodSwitcherState createState() => _MoodSwitcherState();
+}
+
+class _MoodSwitcherState extends State<MoodSwitcher> {
+  int selectedMood = 2;
+
+  List<String> moods = [
+    "😴 Sleepy",
+    "😢 Sad",
+    "😐 Neutral",
+    "😃 Happy",
+    "😡 Angry",
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFF252736),
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text(
+                  'HOW ARE YOU TODAY?',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              CarouselSlider(
+                options: CarouselOptions(
+                  height: 175,
+                  enlargeCenterPage: true,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      selectedMood = index;
+                    });
+                  },
+                  enableInfiniteScroll: false,
+                  viewportFraction: 0.4,
+                  aspectRatio: 2.0,
+                  scrollDirection: Axis.horizontal,
+                  autoPlay: false,
+                  initialPage: selectedMood,
+                ),
+                items: moods.map((mood) {
+                  return MoodIcon(
+                    mood: mood,
+                    isSelected: mood == moods[selectedMood],
+                    onMoodSelected: () {
+                      setState(() {
+                        selectedMood = moods.indexOf(mood);
+                      });
+                    },
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MoodIcon extends StatelessWidget {
+  final String mood;
+  final bool isSelected;
+  final Function onMoodSelected;
+
+  const MoodIcon({
+    super.key,
+    required this.mood,
+    required this.isSelected,
+    required this.onMoodSelected,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        onMoodSelected();
+      },
+      child: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              color: isSelected ? Colors.blue : const Color(0xFF252736),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text(
+              mood.split(' ')[0],
+              style: const TextStyle(fontSize: 30),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            mood.split(' ')[1],
+            style: const TextStyle(fontSize: 16, color: Colors.white),
+          ),
+        ],
+      ),
+    );
+  }
+}
