@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import '../widgets/comunication_item_widget.dart';
 
-class TableScreen extends StatelessWidget {
+class TableScreen extends StatefulWidget {
   const TableScreen({super.key});
+
+  @override
+  _TableScreenState createState() => _TableScreenState();
+}
+
+class _TableScreenState extends State<TableScreen> {
+  bool isMicrophoneMutedAndrea = false;
+  bool isMicrophoneMutedJustin = true;
+  bool isMicrophoneMutedStefan = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,16 +46,39 @@ class TableScreen extends StatelessWidget {
             child: const Center(),
           ),
           Positioned(
-            top: 70,
-            left: 66,
-            right: 66,
+            top: 30,
+            left: 64,
+            right: 64,
             child: Container(
               height: 450,
               decoration: BoxDecoration(
                 color: const Color(0xFF252736),
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: const Center(),
+              child: Column(
+                children: [
+                  CommunicationItem(
+                    imagePath: 'assets/images/andrea.jpg',
+                    emoji: '😴',
+                    isMicrophoneMuted: isMicrophoneMutedAndrea,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      CommunicationItem(
+                        imagePath: 'assets/images/justin.jpg',
+                        emoji: '😃',
+                        isMicrophoneMuted: isMicrophoneMutedJustin,
+                      ),
+                    ],
+                  ),
+                  CommunicationItem(
+                    imagePath: 'assets/images/stefan.jpg',
+                    emoji: '😡',
+                    isMicrophoneMuted: isMicrophoneMutedStefan,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
