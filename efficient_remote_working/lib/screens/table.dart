@@ -7,18 +7,18 @@ class TableScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Column(
+        title: const Column(
           children: [
-            const Text(
+            Text(
               'THE COFFEE TABLE',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 1),
-            const Text(
-              'COMMUNICATION IS KEY',
+            SizedBox(height: 1),
+            Text(
+              'COMMUNICATION = 🔑',
               style: TextStyle(
                 color: Colors.blue,
                 fontWeight: FontWeight.bold,
@@ -33,21 +33,19 @@ class TableScreen extends StatelessWidget {
         children: [
           Container(
             color: const Color(0xFF1E1D2A),
-            child: const Center(
-            ),
+            child: const Center(),
           ),
           Positioned(
-            top: 70, // Adjust the top position as needed
-            left: 66, // Adjust the left position as needed
-            right: 66, // Adjust the right position as needed
+            top: 70,
+            left: 66,
+            right: 66,
             child: Container(
-              height: 450, // Set the height as needed
+              height: 450,
               decoration: BoxDecoration(
                 color: const Color(0xFF252736),
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: Center(
-              ),
+              child: const Center(),
             ),
           ),
         ],
